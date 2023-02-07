@@ -16,5 +16,20 @@ namespace Beacon
         {
             InitializeComponent();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            textBox1.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
+        }
     }
 }
