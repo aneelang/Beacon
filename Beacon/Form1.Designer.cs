@@ -87,9 +87,9 @@
             this.labelAppTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAppTitle.Location = new System.Drawing.Point(191, 30);
             this.labelAppTitle.Name = "labelAppTitle";
-            this.labelAppTitle.Size = new System.Drawing.Size(303, 29);
+            this.labelAppTitle.Size = new System.Drawing.Size(310, 29);
             this.labelAppTitle.TabIndex = 0;
-            this.labelAppTitle.Text = "RF Tag User Configuration";
+            this.labelAppTitle.Text = "Beacon User Configuration";
             // 
             // labelReadConfiguration
             // 
@@ -210,7 +210,9 @@
             -6,
             0,
             5,
-            7});
+            7,
+            10,
+            12});
             this.comboBoxReadPowerLevel.Location = new System.Drawing.Point(110, 271);
             this.comboBoxReadPowerLevel.Name = "comboBoxReadPowerLevel";
             this.comboBoxReadPowerLevel.Size = new System.Drawing.Size(64, 26);
@@ -344,6 +346,7 @@
             this.comboBoxWriteTimeInterval.Name = "comboBoxWriteTimeInterval";
             this.comboBoxWriteTimeInterval.Size = new System.Drawing.Size(63, 26);
             this.comboBoxWriteTimeInterval.TabIndex = 27;
+            this.comboBoxWriteTimeInterval.Text = "125";
             // 
             // labelWriteDbm
             // 
@@ -379,12 +382,11 @@
             this.comboBoxWritePowerLevel.Name = "comboBoxWritePowerLevel";
             this.comboBoxWritePowerLevel.Size = new System.Drawing.Size(63, 26);
             this.comboBoxWritePowerLevel.TabIndex = 21;
+            this.comboBoxWritePowerLevel.Text = "12";
             // 
             // checkBoxWriteGoToSleepMode
             // 
             this.checkBoxWriteGoToSleepMode.AutoSize = true;
-            this.checkBoxWriteGoToSleepMode.Checked = true;
-            this.checkBoxWriteGoToSleepMode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxWriteGoToSleepMode.Location = new System.Drawing.Point(146, 234);
             this.checkBoxWriteGoToSleepMode.Name = "checkBoxWriteGoToSleepMode";
             this.checkBoxWriteGoToSleepMode.Size = new System.Drawing.Size(15, 14);
@@ -421,6 +423,7 @@
             this.comboBoxWriteChannel.Name = "comboBoxWriteChannel";
             this.comboBoxWriteChannel.Size = new System.Drawing.Size(63, 26);
             this.comboBoxWriteChannel.TabIndex = 13;
+            this.comboBoxWriteChannel.Text = "867.1";
             // 
             // labelWriteChannel
             // 
@@ -443,14 +446,15 @@
             // comboBoxWriteRFBaudRate
             // 
             this.comboBoxWriteRFBaudRate.FormattingEnabled = true;
-            this.comboBoxWriteRFBaudRate.Location = new System.Drawing.Point(112, 141);
-            this.comboBoxWriteRFBaudRate.Name = "comboBoxWriteRFBaudRate";
-            this.comboBoxWriteRFBaudRate.Size = new System.Drawing.Size(64, 26);
-            this.comboBoxWriteRFBaudRate.TabIndex = 9;
             this.comboBoxWriteRFBaudRate.Items.AddRange(new object[] {
             9.6D,
             38.4D,
             100});
+            this.comboBoxWriteRFBaudRate.Location = new System.Drawing.Point(112, 141);
+            this.comboBoxWriteRFBaudRate.Name = "comboBoxWriteRFBaudRate";
+            this.comboBoxWriteRFBaudRate.Size = new System.Drawing.Size(64, 26);
+            this.comboBoxWriteRFBaudRate.TabIndex = 9;
+            this.comboBoxWriteRFBaudRate.Text = "100";
             // 
             // labelWriteRFBaudRate
             // 
@@ -485,6 +489,7 @@
             this.textBoxWriteTagId.Name = "textBoxWriteTagId";
             this.textBoxWriteTagId.Size = new System.Drawing.Size(158, 24);
             this.textBoxWriteTagId.TabIndex = 3;
+            this.textBoxWriteTagId.Text = "BE_01";
             // 
             // labelWriteTagId
             // 
