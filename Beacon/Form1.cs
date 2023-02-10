@@ -25,11 +25,15 @@ namespace Beacon
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
+/*            this.checkBoxWriteGoToSleepMode.Checked = true;
+            this.checkReadBoxGoToSleepMode.Checked = true;*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             textBox1.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
         }
+
+       
     }
 }

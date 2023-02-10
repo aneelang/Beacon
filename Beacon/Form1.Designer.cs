@@ -33,12 +33,9 @@
             this.labelReadConfiguration = new System.Windows.Forms.Label();
             this.labelWriteConfiguration = new System.Windows.Forms.Label();
             this.groupBoxReadSettings = new System.Windows.Forms.GroupBox();
+            this.comboBoxReadTimeInterval = new System.Windows.Forms.ComboBox();
             this.labelReadDbm = new System.Windows.Forms.Label();
             this.checkReadBoxGoToSleepMode = new System.Windows.Forms.CheckBox();
-            this.labelReadTXCount = new System.Windows.Forms.Label();
-            this.textBoxReadTXCount = new System.Windows.Forms.TextBox();
-            this.textBoxReadMagnetCount = new System.Windows.Forms.TextBox();
-            this.labelReadMagnetCount = new System.Windows.Forms.Label();
             this.labelReadPowerLevel = new System.Windows.Forms.Label();
             this.labelReadGoToSleepMode = new System.Windows.Forms.Label();
             this.labelReadMhz = new System.Windows.Forms.Label();
@@ -49,35 +46,35 @@
             this.comboBoxReadRFBaudRead = new System.Windows.Forms.ComboBox();
             this.labelReadRFBaudRate = new System.Windows.Forms.Label();
             this.labelReadSec = new System.Windows.Forms.Label();
-            this.textBoxReadTimeInterval = new System.Windows.Forms.TextBox();
             this.labelReadTimeInterval = new System.Windows.Forms.Label();
             this.textBoxReadTagId = new System.Windows.Forms.TextBox();
             this.labelReadTagId = new System.Windows.Forms.Label();
             this.groupBoxWriteSettings = new System.Windows.Forms.GroupBox();
-            this.textBoxWriteTagId = new System.Windows.Forms.TextBox();
-            this.labelWriteTagId = new System.Windows.Forms.Label();
-            this.labelWriteSec = new System.Windows.Forms.Label();
-            this.textBoxWriteTimeInterval = new System.Windows.Forms.TextBox();
-            this.labelWriteTimeInterval = new System.Windows.Forms.Label();
-            this.labelWriteKbps = new System.Windows.Forms.Label();
-            this.comboBoxWriteRFBaudRate = new System.Windows.Forms.ComboBox();
-            this.labelWriteRFBaudRate = new System.Windows.Forms.Label();
-            this.labelWriteMhz = new System.Windows.Forms.Label();
-            this.comboBoxWriteChannel = new System.Windows.Forms.ComboBox();
-            this.labelWriteChannel = new System.Windows.Forms.Label();
-            this.checkBoxWriteGoToSleepMode = new System.Windows.Forms.CheckBox();
-            this.labelWriteGoToSleepMode = new System.Windows.Forms.Label();
+            this.comboBoxWriteTimeInterval = new System.Windows.Forms.ComboBox();
             this.labelWriteDbm = new System.Windows.Forms.Label();
             this.labelWritePowerLevel = new System.Windows.Forms.Label();
             this.comboBoxWritePowerLevel = new System.Windows.Forms.ComboBox();
+            this.checkBoxWriteGoToSleepMode = new System.Windows.Forms.CheckBox();
+            this.labelWriteGoToSleepMode = new System.Windows.Forms.Label();
+            this.labelWriteMhz = new System.Windows.Forms.Label();
+            this.comboBoxWriteChannel = new System.Windows.Forms.ComboBox();
+            this.labelWriteChannel = new System.Windows.Forms.Label();
+            this.labelWriteKbps = new System.Windows.Forms.Label();
+            this.comboBoxWriteRFBaudRate = new System.Windows.Forms.ComboBox();
+            this.labelWriteRFBaudRate = new System.Windows.Forms.Label();
+            this.labelWriteSec = new System.Windows.Forms.Label();
+            this.labelWriteTimeInterval = new System.Windows.Forms.Label();
+            this.textBoxWriteTagId = new System.Windows.Forms.TextBox();
+            this.labelWriteTagId = new System.Windows.Forms.Label();
             this.groupBoxPCSetting = new System.Windows.Forms.GroupBox();
-            this.labelSerialPort = new System.Windows.Forms.Label();
             this.comboBoxSerialPort = new System.Windows.Forms.ComboBox();
+            this.labelSerialPort = new System.Windows.Forms.Label();
             this.buttonWriteToDevice = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelWriteToDeviceTimeOut = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBoxReadSettings.SuspendLayout();
             this.groupBoxWriteSettings.SuspendLayout();
             this.groupBoxPCSetting.SuspendLayout();
@@ -116,12 +113,9 @@
             // 
             // groupBoxReadSettings
             // 
+            this.groupBoxReadSettings.Controls.Add(this.comboBoxReadTimeInterval);
             this.groupBoxReadSettings.Controls.Add(this.labelReadDbm);
             this.groupBoxReadSettings.Controls.Add(this.checkReadBoxGoToSleepMode);
-            this.groupBoxReadSettings.Controls.Add(this.labelReadTXCount);
-            this.groupBoxReadSettings.Controls.Add(this.textBoxReadTXCount);
-            this.groupBoxReadSettings.Controls.Add(this.textBoxReadMagnetCount);
-            this.groupBoxReadSettings.Controls.Add(this.labelReadMagnetCount);
             this.groupBoxReadSettings.Controls.Add(this.labelReadPowerLevel);
             this.groupBoxReadSettings.Controls.Add(this.labelReadGoToSleepMode);
             this.groupBoxReadSettings.Controls.Add(this.labelReadMhz);
@@ -132,7 +126,6 @@
             this.groupBoxReadSettings.Controls.Add(this.comboBoxReadRFBaudRead);
             this.groupBoxReadSettings.Controls.Add(this.labelReadRFBaudRate);
             this.groupBoxReadSettings.Controls.Add(this.labelReadSec);
-            this.groupBoxReadSettings.Controls.Add(this.textBoxReadTimeInterval);
             this.groupBoxReadSettings.Controls.Add(this.labelReadTimeInterval);
             this.groupBoxReadSettings.Controls.Add(this.textBoxReadTagId);
             this.groupBoxReadSettings.Controls.Add(this.labelReadTagId);
@@ -144,10 +137,27 @@
             this.groupBoxReadSettings.TabStop = false;
             this.groupBoxReadSettings.Text = "Read Settings";
             // 
+            // comboBoxReadTimeInterval
+            // 
+            this.comboBoxReadTimeInterval.FormattingEnabled = true;
+            this.comboBoxReadTimeInterval.Items.AddRange(new object[] {
+            125,
+            250,
+            375,
+            500,
+            625,
+            750,
+            875,
+            1000});
+            this.comboBoxReadTimeInterval.Location = new System.Drawing.Point(110, 88);
+            this.comboBoxReadTimeInterval.Name = "comboBoxReadTimeInterval";
+            this.comboBoxReadTimeInterval.Size = new System.Drawing.Size(64, 26);
+            this.comboBoxReadTimeInterval.TabIndex = 26;
+            // 
             // labelReadDbm
             // 
             this.labelReadDbm.AutoSize = true;
-            this.labelReadDbm.Location = new System.Drawing.Point(164, 204);
+            this.labelReadDbm.Location = new System.Drawing.Point(181, 274);
             this.labelReadDbm.Name = "labelReadDbm";
             this.labelReadDbm.Size = new System.Drawing.Size(39, 18);
             this.labelReadDbm.TabIndex = 19;
@@ -156,48 +166,16 @@
             // checkReadBoxGoToSleepMode
             // 
             this.checkReadBoxGoToSleepMode.AutoSize = true;
-            this.checkReadBoxGoToSleepMode.Location = new System.Drawing.Point(143, 179);
+            this.checkReadBoxGoToSleepMode.Location = new System.Drawing.Point(147, 234);
             this.checkReadBoxGoToSleepMode.Name = "checkReadBoxGoToSleepMode";
             this.checkReadBoxGoToSleepMode.Size = new System.Drawing.Size(15, 14);
             this.checkReadBoxGoToSleepMode.TabIndex = 18;
             this.checkReadBoxGoToSleepMode.UseVisualStyleBackColor = true;
             // 
-            // labelReadTXCount
-            // 
-            this.labelReadTXCount.AutoSize = true;
-            this.labelReadTXCount.Location = new System.Drawing.Point(6, 277);
-            this.labelReadTXCount.Name = "labelReadTXCount";
-            this.labelReadTXCount.Size = new System.Drawing.Size(71, 18);
-            this.labelReadTXCount.TabIndex = 17;
-            this.labelReadTXCount.Text = "TX Count";
-            // 
-            // textBoxReadTXCount
-            // 
-            this.textBoxReadTXCount.Location = new System.Drawing.Point(110, 271);
-            this.textBoxReadTXCount.Name = "textBoxReadTXCount";
-            this.textBoxReadTXCount.Size = new System.Drawing.Size(164, 24);
-            this.textBoxReadTXCount.TabIndex = 16;
-            // 
-            // textBoxReadMagnetCount
-            // 
-            this.textBoxReadMagnetCount.Location = new System.Drawing.Point(110, 241);
-            this.textBoxReadMagnetCount.Name = "textBoxReadMagnetCount";
-            this.textBoxReadMagnetCount.Size = new System.Drawing.Size(164, 24);
-            this.textBoxReadMagnetCount.TabIndex = 15;
-            // 
-            // labelReadMagnetCount
-            // 
-            this.labelReadMagnetCount.AutoSize = true;
-            this.labelReadMagnetCount.Location = new System.Drawing.Point(7, 241);
-            this.labelReadMagnetCount.Name = "labelReadMagnetCount";
-            this.labelReadMagnetCount.Size = new System.Drawing.Size(101, 18);
-            this.labelReadMagnetCount.TabIndex = 14;
-            this.labelReadMagnetCount.Text = "Magnet Count";
-            // 
             // labelReadPowerLevel
             // 
             this.labelReadPowerLevel.AutoSize = true;
-            this.labelReadPowerLevel.Location = new System.Drawing.Point(6, 208);
+            this.labelReadPowerLevel.Location = new System.Drawing.Point(15, 274);
             this.labelReadPowerLevel.Name = "labelReadPowerLevel";
             this.labelReadPowerLevel.Size = new System.Drawing.Size(89, 18);
             this.labelReadPowerLevel.TabIndex = 13;
@@ -206,7 +184,7 @@
             // labelReadGoToSleepMode
             // 
             this.labelReadGoToSleepMode.AutoSize = true;
-            this.labelReadGoToSleepMode.Location = new System.Drawing.Point(7, 175);
+            this.labelReadGoToSleepMode.Location = new System.Drawing.Point(7, 230);
             this.labelReadGoToSleepMode.Name = "labelReadGoToSleepMode";
             this.labelReadGoToSleepMode.Size = new System.Drawing.Size(134, 18);
             this.labelReadGoToSleepMode.TabIndex = 12;
@@ -215,7 +193,7 @@
             // labelReadMhz
             // 
             this.labelReadMhz.AutoSize = true;
-            this.labelReadMhz.Location = new System.Drawing.Point(164, 149);
+            this.labelReadMhz.Location = new System.Drawing.Point(180, 189);
             this.labelReadMhz.Name = "labelReadMhz";
             this.labelReadMhz.Size = new System.Drawing.Size(40, 18);
             this.labelReadMhz.TabIndex = 11;
@@ -224,23 +202,37 @@
             // comboBoxReadPowerLevel
             // 
             this.comboBoxReadPowerLevel.FormattingEnabled = true;
-            this.comboBoxReadPowerLevel.Location = new System.Drawing.Point(110, 201);
+            this.comboBoxReadPowerLevel.Items.AddRange(new object[] {
+            -30,
+            -20,
+            -15,
+            -10,
+            -6,
+            0,
+            5,
+            7});
+            this.comboBoxReadPowerLevel.Location = new System.Drawing.Point(110, 271);
             this.comboBoxReadPowerLevel.Name = "comboBoxReadPowerLevel";
-            this.comboBoxReadPowerLevel.Size = new System.Drawing.Size(48, 26);
+            this.comboBoxReadPowerLevel.Size = new System.Drawing.Size(64, 26);
             this.comboBoxReadPowerLevel.TabIndex = 10;
             // 
             // comboBoxReadChannel
             // 
             this.comboBoxReadChannel.FormattingEnabled = true;
-            this.comboBoxReadChannel.Location = new System.Drawing.Point(110, 144);
+            this.comboBoxReadChannel.Items.AddRange(new object[] {
+            867.1D,
+            867.3D,
+            867.5D,
+            867.7D});
+            this.comboBoxReadChannel.Location = new System.Drawing.Point(110, 184);
             this.comboBoxReadChannel.Name = "comboBoxReadChannel";
-            this.comboBoxReadChannel.Size = new System.Drawing.Size(48, 26);
+            this.comboBoxReadChannel.Size = new System.Drawing.Size(64, 26);
             this.comboBoxReadChannel.TabIndex = 9;
             // 
             // labelReadChannel
             // 
             this.labelReadChannel.AutoSize = true;
-            this.labelReadChannel.Location = new System.Drawing.Point(7, 144);
+            this.labelReadChannel.Location = new System.Drawing.Point(36, 189);
             this.labelReadChannel.Name = "labelReadChannel";
             this.labelReadChannel.Size = new System.Drawing.Size(62, 18);
             this.labelReadChannel.TabIndex = 8;
@@ -249,7 +241,7 @@
             // labelReadKbps
             // 
             this.labelReadKbps.AutoSize = true;
-            this.labelReadKbps.Location = new System.Drawing.Point(164, 112);
+            this.labelReadKbps.Location = new System.Drawing.Point(180, 141);
             this.labelReadKbps.Name = "labelReadKbps";
             this.labelReadKbps.Size = new System.Drawing.Size(40, 18);
             this.labelReadKbps.TabIndex = 7;
@@ -258,15 +250,19 @@
             // comboBoxReadRFBaudRead
             // 
             this.comboBoxReadRFBaudRead.FormattingEnabled = true;
-            this.comboBoxReadRFBaudRead.Location = new System.Drawing.Point(110, 109);
+            this.comboBoxReadRFBaudRead.Items.AddRange(new object[] {
+            9.6D,
+            38.4D,
+            100});
+            this.comboBoxReadRFBaudRead.Location = new System.Drawing.Point(110, 136);
             this.comboBoxReadRFBaudRead.Name = "comboBoxReadRFBaudRead";
-            this.comboBoxReadRFBaudRead.Size = new System.Drawing.Size(48, 26);
+            this.comboBoxReadRFBaudRead.Size = new System.Drawing.Size(64, 26);
             this.comboBoxReadRFBaudRead.TabIndex = 6;
             // 
             // labelReadRFBaudRate
             // 
             this.labelReadRFBaudRate.AutoSize = true;
-            this.labelReadRFBaudRate.Location = new System.Drawing.Point(7, 108);
+            this.labelReadRFBaudRate.Location = new System.Drawing.Point(3, 144);
             this.labelReadRFBaudRate.Name = "labelReadRFBaudRate";
             this.labelReadRFBaudRate.Size = new System.Drawing.Size(101, 18);
             this.labelReadRFBaudRate.TabIndex = 5;
@@ -275,23 +271,16 @@
             // labelReadSec
             // 
             this.labelReadSec.AutoSize = true;
-            this.labelReadSec.Location = new System.Drawing.Point(164, 75);
+            this.labelReadSec.Location = new System.Drawing.Point(180, 96);
             this.labelReadSec.Name = "labelReadSec";
             this.labelReadSec.Size = new System.Drawing.Size(34, 18);
             this.labelReadSec.TabIndex = 4;
             this.labelReadSec.Text = "Sec";
             // 
-            // textBoxReadTimeInterval
-            // 
-            this.textBoxReadTimeInterval.Location = new System.Drawing.Point(110, 68);
-            this.textBoxReadTimeInterval.Name = "textBoxReadTimeInterval";
-            this.textBoxReadTimeInterval.Size = new System.Drawing.Size(48, 24);
-            this.textBoxReadTimeInterval.TabIndex = 3;
-            // 
             // labelReadTimeInterval
             // 
             this.labelReadTimeInterval.AutoSize = true;
-            this.labelReadTimeInterval.Location = new System.Drawing.Point(7, 71);
+            this.labelReadTimeInterval.Location = new System.Drawing.Point(7, 88);
             this.labelReadTimeInterval.Name = "labelReadTimeInterval";
             this.labelReadTimeInterval.Size = new System.Drawing.Size(91, 18);
             this.labelReadTimeInterval.TabIndex = 2;
@@ -299,7 +288,7 @@
             // 
             // textBoxReadTagId
             // 
-            this.textBoxReadTagId.Location = new System.Drawing.Point(110, 28);
+            this.textBoxReadTagId.Location = new System.Drawing.Point(109, 36);
             this.textBoxReadTagId.Name = "textBoxReadTagId";
             this.textBoxReadTagId.Size = new System.Drawing.Size(164, 24);
             this.textBoxReadTagId.TabIndex = 1;
@@ -307,14 +296,15 @@
             // labelReadTagId
             // 
             this.labelReadTagId.AutoSize = true;
-            this.labelReadTagId.Location = new System.Drawing.Point(7, 39);
+            this.labelReadTagId.Location = new System.Drawing.Point(21, 42);
             this.labelReadTagId.Name = "labelReadTagId";
-            this.labelReadTagId.Size = new System.Drawing.Size(56, 18);
+            this.labelReadTagId.Size = new System.Drawing.Size(77, 18);
             this.labelReadTagId.TabIndex = 0;
-            this.labelReadTagId.Text = "TAG ID";
+            this.labelReadTagId.Text = "Beacon ID";
             // 
             // groupBoxWriteSettings
             // 
+            this.groupBoxWriteSettings.Controls.Add(this.comboBoxWriteTimeInterval);
             this.groupBoxWriteSettings.Controls.Add(this.labelWriteDbm);
             this.groupBoxWriteSettings.Controls.Add(this.labelWritePowerLevel);
             this.groupBoxWriteSettings.Controls.Add(this.comboBoxWritePowerLevel);
@@ -327,7 +317,6 @@
             this.groupBoxWriteSettings.Controls.Add(this.comboBoxWriteRFBaudRate);
             this.groupBoxWriteSettings.Controls.Add(this.labelWriteRFBaudRate);
             this.groupBoxWriteSettings.Controls.Add(this.labelWriteSec);
-            this.groupBoxWriteSettings.Controls.Add(this.textBoxWriteTimeInterval);
             this.groupBoxWriteSettings.Controls.Add(this.labelWriteTimeInterval);
             this.groupBoxWriteSettings.Controls.Add(this.textBoxWriteTagId);
             this.groupBoxWriteSettings.Controls.Add(this.labelWriteTagId);
@@ -339,6 +328,157 @@
             this.groupBoxWriteSettings.TabStop = false;
             this.groupBoxWriteSettings.Text = "Write Settings";
             // 
+            // comboBoxWriteTimeInterval
+            // 
+            this.comboBoxWriteTimeInterval.FormattingEnabled = true;
+            this.comboBoxWriteTimeInterval.Items.AddRange(new object[] {
+            125,
+            250,
+            375,
+            500,
+            625,
+            750,
+            875,
+            1000});
+            this.comboBoxWriteTimeInterval.Location = new System.Drawing.Point(113, 93);
+            this.comboBoxWriteTimeInterval.Name = "comboBoxWriteTimeInterval";
+            this.comboBoxWriteTimeInterval.Size = new System.Drawing.Size(63, 26);
+            this.comboBoxWriteTimeInterval.TabIndex = 27;
+            // 
+            // labelWriteDbm
+            // 
+            this.labelWriteDbm.AutoSize = true;
+            this.labelWriteDbm.Location = new System.Drawing.Point(182, 272);
+            this.labelWriteDbm.Name = "labelWriteDbm";
+            this.labelWriteDbm.Size = new System.Drawing.Size(39, 18);
+            this.labelWriteDbm.TabIndex = 23;
+            this.labelWriteDbm.Text = "dBm";
+            // 
+            // labelWritePowerLevel
+            // 
+            this.labelWritePowerLevel.AutoSize = true;
+            this.labelWritePowerLevel.Location = new System.Drawing.Point(17, 271);
+            this.labelWritePowerLevel.Name = "labelWritePowerLevel";
+            this.labelWritePowerLevel.Size = new System.Drawing.Size(89, 18);
+            this.labelWritePowerLevel.TabIndex = 22;
+            this.labelWritePowerLevel.Text = "Power Level";
+            // 
+            // comboBoxWritePowerLevel
+            // 
+            this.comboBoxWritePowerLevel.FormattingEnabled = true;
+            this.comboBoxWritePowerLevel.Items.AddRange(new object[] {
+            -30,
+            -20,
+            -15,
+            -10,
+            -6,
+            0,
+            5,
+            7});
+            this.comboBoxWritePowerLevel.Location = new System.Drawing.Point(113, 269);
+            this.comboBoxWritePowerLevel.Name = "comboBoxWritePowerLevel";
+            this.comboBoxWritePowerLevel.Size = new System.Drawing.Size(63, 26);
+            this.comboBoxWritePowerLevel.TabIndex = 21;
+            // 
+            // checkBoxWriteGoToSleepMode
+            // 
+            this.checkBoxWriteGoToSleepMode.AutoSize = true;
+            this.checkBoxWriteGoToSleepMode.Checked = true;
+            this.checkBoxWriteGoToSleepMode.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxWriteGoToSleepMode.Location = new System.Drawing.Point(146, 234);
+            this.checkBoxWriteGoToSleepMode.Name = "checkBoxWriteGoToSleepMode";
+            this.checkBoxWriteGoToSleepMode.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxWriteGoToSleepMode.TabIndex = 20;
+            this.checkBoxWriteGoToSleepMode.UseVisualStyleBackColor = true;
+            // 
+            // labelWriteGoToSleepMode
+            // 
+            this.labelWriteGoToSleepMode.AutoSize = true;
+            this.labelWriteGoToSleepMode.Location = new System.Drawing.Point(6, 231);
+            this.labelWriteGoToSleepMode.Name = "labelWriteGoToSleepMode";
+            this.labelWriteGoToSleepMode.Size = new System.Drawing.Size(134, 18);
+            this.labelWriteGoToSleepMode.TabIndex = 19;
+            this.labelWriteGoToSleepMode.Text = "Go To Sleep Mode";
+            // 
+            // labelWriteMhz
+            // 
+            this.labelWriteMhz.AutoSize = true;
+            this.labelWriteMhz.Location = new System.Drawing.Point(182, 192);
+            this.labelWriteMhz.Name = "labelWriteMhz";
+            this.labelWriteMhz.Size = new System.Drawing.Size(40, 18);
+            this.labelWriteMhz.TabIndex = 14;
+            this.labelWriteMhz.Text = "MHz";
+            // 
+            // comboBoxWriteChannel
+            // 
+            this.comboBoxWriteChannel.FormattingEnabled = true;
+            this.comboBoxWriteChannel.Items.AddRange(new object[] {
+            867.1D,
+            867.3D,
+            867.5D,
+            867.7D});
+            this.comboBoxWriteChannel.Location = new System.Drawing.Point(113, 189);
+            this.comboBoxWriteChannel.Name = "comboBoxWriteChannel";
+            this.comboBoxWriteChannel.Size = new System.Drawing.Size(63, 26);
+            this.comboBoxWriteChannel.TabIndex = 13;
+            // 
+            // labelWriteChannel
+            // 
+            this.labelWriteChannel.AutoSize = true;
+            this.labelWriteChannel.Location = new System.Drawing.Point(44, 192);
+            this.labelWriteChannel.Name = "labelWriteChannel";
+            this.labelWriteChannel.Size = new System.Drawing.Size(62, 18);
+            this.labelWriteChannel.TabIndex = 12;
+            this.labelWriteChannel.Text = "Channel";
+            // 
+            // labelWriteKbps
+            // 
+            this.labelWriteKbps.AutoSize = true;
+            this.labelWriteKbps.Location = new System.Drawing.Point(182, 144);
+            this.labelWriteKbps.Name = "labelWriteKbps";
+            this.labelWriteKbps.Size = new System.Drawing.Size(40, 18);
+            this.labelWriteKbps.TabIndex = 10;
+            this.labelWriteKbps.Text = "kbps";
+            // 
+            // comboBoxWriteRFBaudRate
+            // 
+            this.comboBoxWriteRFBaudRate.FormattingEnabled = true;
+            this.comboBoxWriteRFBaudRate.Location = new System.Drawing.Point(112, 141);
+            this.comboBoxWriteRFBaudRate.Name = "comboBoxWriteRFBaudRate";
+            this.comboBoxWriteRFBaudRate.Size = new System.Drawing.Size(64, 26);
+            this.comboBoxWriteRFBaudRate.TabIndex = 9;
+            this.comboBoxWriteRFBaudRate.Items.AddRange(new object[] {
+            9.6D,
+            38.4D,
+            100});
+            // 
+            // labelWriteRFBaudRate
+            // 
+            this.labelWriteRFBaudRate.AutoSize = true;
+            this.labelWriteRFBaudRate.Location = new System.Drawing.Point(5, 144);
+            this.labelWriteRFBaudRate.Name = "labelWriteRFBaudRate";
+            this.labelWriteRFBaudRate.Size = new System.Drawing.Size(101, 18);
+            this.labelWriteRFBaudRate.TabIndex = 8;
+            this.labelWriteRFBaudRate.Text = "RF Baud Rate";
+            // 
+            // labelWriteSec
+            // 
+            this.labelWriteSec.AutoSize = true;
+            this.labelWriteSec.Location = new System.Drawing.Point(182, 96);
+            this.labelWriteSec.Name = "labelWriteSec";
+            this.labelWriteSec.Size = new System.Drawing.Size(34, 18);
+            this.labelWriteSec.TabIndex = 7;
+            this.labelWriteSec.Text = "Sec";
+            // 
+            // labelWriteTimeInterval
+            // 
+            this.labelWriteTimeInterval.AutoSize = true;
+            this.labelWriteTimeInterval.Location = new System.Drawing.Point(15, 96);
+            this.labelWriteTimeInterval.Name = "labelWriteTimeInterval";
+            this.labelWriteTimeInterval.Size = new System.Drawing.Size(91, 18);
+            this.labelWriteTimeInterval.TabIndex = 5;
+            this.labelWriteTimeInterval.Text = "Time Interval";
+            // 
             // textBoxWriteTagId
             // 
             this.textBoxWriteTagId.Location = new System.Drawing.Point(113, 39);
@@ -349,132 +489,11 @@
             // labelWriteTagId
             // 
             this.labelWriteTagId.AutoSize = true;
-            this.labelWriteTagId.Location = new System.Drawing.Point(6, 39);
+            this.labelWriteTagId.Location = new System.Drawing.Point(29, 42);
             this.labelWriteTagId.Name = "labelWriteTagId";
-            this.labelWriteTagId.Size = new System.Drawing.Size(56, 18);
+            this.labelWriteTagId.Size = new System.Drawing.Size(77, 18);
             this.labelWriteTagId.TabIndex = 2;
-            this.labelWriteTagId.Text = "TAG ID";
-            // 
-            // labelWriteSec
-            // 
-            this.labelWriteSec.AutoSize = true;
-            this.labelWriteSec.Location = new System.Drawing.Point(156, 78);
-            this.labelWriteSec.Name = "labelWriteSec";
-            this.labelWriteSec.Size = new System.Drawing.Size(34, 18);
-            this.labelWriteSec.TabIndex = 7;
-            this.labelWriteSec.Text = "Sec";
-            // 
-            // textBoxWriteTimeInterval
-            // 
-            this.textBoxWriteTimeInterval.Location = new System.Drawing.Point(113, 72);
-            this.textBoxWriteTimeInterval.Name = "textBoxWriteTimeInterval";
-            this.textBoxWriteTimeInterval.Size = new System.Drawing.Size(36, 24);
-            this.textBoxWriteTimeInterval.TabIndex = 6;
-            // 
-            // labelWriteTimeInterval
-            // 
-            this.labelWriteTimeInterval.AutoSize = true;
-            this.labelWriteTimeInterval.Location = new System.Drawing.Point(6, 75);
-            this.labelWriteTimeInterval.Name = "labelWriteTimeInterval";
-            this.labelWriteTimeInterval.Size = new System.Drawing.Size(91, 18);
-            this.labelWriteTimeInterval.TabIndex = 5;
-            this.labelWriteTimeInterval.Text = "Time Interval";
-            // 
-            // labelWriteKbps
-            // 
-            this.labelWriteKbps.AutoSize = true;
-            this.labelWriteKbps.Location = new System.Drawing.Point(168, 112);
-            this.labelWriteKbps.Name = "labelWriteKbps";
-            this.labelWriteKbps.Size = new System.Drawing.Size(40, 18);
-            this.labelWriteKbps.TabIndex = 10;
-            this.labelWriteKbps.Text = "kbps";
-            // 
-            // comboBoxWriteRFBaudRate
-            // 
-            this.comboBoxWriteRFBaudRate.FormattingEnabled = true;
-            this.comboBoxWriteRFBaudRate.Location = new System.Drawing.Point(113, 108);
-            this.comboBoxWriteRFBaudRate.Name = "comboBoxWriteRFBaudRate";
-            this.comboBoxWriteRFBaudRate.Size = new System.Drawing.Size(48, 26);
-            this.comboBoxWriteRFBaudRate.TabIndex = 9;
-            // 
-            // labelWriteRFBaudRate
-            // 
-            this.labelWriteRFBaudRate.AutoSize = true;
-            this.labelWriteRFBaudRate.Location = new System.Drawing.Point(6, 111);
-            this.labelWriteRFBaudRate.Name = "labelWriteRFBaudRate";
-            this.labelWriteRFBaudRate.Size = new System.Drawing.Size(101, 18);
-            this.labelWriteRFBaudRate.TabIndex = 8;
-            this.labelWriteRFBaudRate.Text = "RF Baud Rate";
-            // 
-            // labelWriteMhz
-            // 
-            this.labelWriteMhz.AutoSize = true;
-            this.labelWriteMhz.Location = new System.Drawing.Point(167, 149);
-            this.labelWriteMhz.Name = "labelWriteMhz";
-            this.labelWriteMhz.Size = new System.Drawing.Size(40, 18);
-            this.labelWriteMhz.TabIndex = 14;
-            this.labelWriteMhz.Text = "MHz";
-            // 
-            // comboBoxWriteChannel
-            // 
-            this.comboBoxWriteChannel.FormattingEnabled = true;
-            this.comboBoxWriteChannel.Location = new System.Drawing.Point(113, 144);
-            this.comboBoxWriteChannel.Name = "comboBoxWriteChannel";
-            this.comboBoxWriteChannel.Size = new System.Drawing.Size(48, 26);
-            this.comboBoxWriteChannel.TabIndex = 13;
-            // 
-            // labelWriteChannel
-            // 
-            this.labelWriteChannel.AutoSize = true;
-            this.labelWriteChannel.Location = new System.Drawing.Point(6, 144);
-            this.labelWriteChannel.Name = "labelWriteChannel";
-            this.labelWriteChannel.Size = new System.Drawing.Size(62, 18);
-            this.labelWriteChannel.TabIndex = 12;
-            this.labelWriteChannel.Text = "Channel";
-            // 
-            // checkBoxWriteGoToSleepMode
-            // 
-            this.checkBoxWriteGoToSleepMode.AutoSize = true;
-            this.checkBoxWriteGoToSleepMode.Location = new System.Drawing.Point(146, 180);
-            this.checkBoxWriteGoToSleepMode.Name = "checkBoxWriteGoToSleepMode";
-            this.checkBoxWriteGoToSleepMode.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxWriteGoToSleepMode.TabIndex = 20;
-            this.checkBoxWriteGoToSleepMode.UseVisualStyleBackColor = true;
-            // 
-            // labelWriteGoToSleepMode
-            // 
-            this.labelWriteGoToSleepMode.AutoSize = true;
-            this.labelWriteGoToSleepMode.Location = new System.Drawing.Point(6, 176);
-            this.labelWriteGoToSleepMode.Name = "labelWriteGoToSleepMode";
-            this.labelWriteGoToSleepMode.Size = new System.Drawing.Size(134, 18);
-            this.labelWriteGoToSleepMode.TabIndex = 19;
-            this.labelWriteGoToSleepMode.Text = "Go To Sleep Mode";
-            // 
-            // labelWriteDbm
-            // 
-            this.labelWriteDbm.AutoSize = true;
-            this.labelWriteDbm.Location = new System.Drawing.Point(167, 208);
-            this.labelWriteDbm.Name = "labelWriteDbm";
-            this.labelWriteDbm.Size = new System.Drawing.Size(39, 18);
-            this.labelWriteDbm.TabIndex = 23;
-            this.labelWriteDbm.Text = "dBm";
-            // 
-            // labelWritePowerLevel
-            // 
-            this.labelWritePowerLevel.AutoSize = true;
-            this.labelWritePowerLevel.Location = new System.Drawing.Point(8, 208);
-            this.labelWritePowerLevel.Name = "labelWritePowerLevel";
-            this.labelWritePowerLevel.Size = new System.Drawing.Size(89, 18);
-            this.labelWritePowerLevel.TabIndex = 22;
-            this.labelWritePowerLevel.Text = "Power Level";
-            // 
-            // comboBoxWritePowerLevel
-            // 
-            this.comboBoxWritePowerLevel.FormattingEnabled = true;
-            this.comboBoxWritePowerLevel.Location = new System.Drawing.Point(113, 201);
-            this.comboBoxWritePowerLevel.Name = "comboBoxWritePowerLevel";
-            this.comboBoxWritePowerLevel.Size = new System.Drawing.Size(48, 26);
-            this.comboBoxWritePowerLevel.TabIndex = 21;
+            this.labelWriteTagId.Text = "Beacon ID";
             // 
             // groupBoxPCSetting
             // 
@@ -488,6 +507,14 @@
             this.groupBoxPCSetting.TabStop = false;
             this.groupBoxPCSetting.Text = "PC Setting";
             // 
+            // comboBoxSerialPort
+            // 
+            this.comboBoxSerialPort.FormattingEnabled = true;
+            this.comboBoxSerialPort.Location = new System.Drawing.Point(110, 21);
+            this.comboBoxSerialPort.Name = "comboBoxSerialPort";
+            this.comboBoxSerialPort.Size = new System.Drawing.Size(106, 26);
+            this.comboBoxSerialPort.TabIndex = 16;
+            // 
             // labelSerialPort
             // 
             this.labelSerialPort.AutoSize = true;
@@ -496,14 +523,6 @@
             this.labelSerialPort.Size = new System.Drawing.Size(77, 18);
             this.labelSerialPort.TabIndex = 15;
             this.labelSerialPort.Text = "Serial Port";
-            // 
-            // comboBoxSerialPort
-            // 
-            this.comboBoxSerialPort.FormattingEnabled = true;
-            this.comboBoxSerialPort.Location = new System.Drawing.Point(110, 21);
-            this.comboBoxSerialPort.Name = "comboBoxSerialPort";
-            this.comboBoxSerialPort.Size = new System.Drawing.Size(106, 26);
-            this.comboBoxSerialPort.TabIndex = 16;
             // 
             // buttonWriteToDevice
             // 
@@ -551,11 +570,19 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(582, 526);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(30, 20);
+            this.textBox2.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 560);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelWriteToDeviceTimeOut);
             this.Controls.Add(this.buttonExit);
@@ -592,13 +619,8 @@
         private System.Windows.Forms.TextBox textBoxReadTagId;
         private System.Windows.Forms.Label labelReadRFBaudRate;
         private System.Windows.Forms.Label labelReadSec;
-        private System.Windows.Forms.TextBox textBoxReadTimeInterval;
         private System.Windows.Forms.Label labelReadDbm;
         private System.Windows.Forms.CheckBox checkReadBoxGoToSleepMode;
-        private System.Windows.Forms.Label labelReadTXCount;
-        private System.Windows.Forms.TextBox textBoxReadTXCount;
-        private System.Windows.Forms.TextBox textBoxReadMagnetCount;
-        private System.Windows.Forms.Label labelReadMagnetCount;
         private System.Windows.Forms.Label labelReadPowerLevel;
         private System.Windows.Forms.Label labelReadGoToSleepMode;
         private System.Windows.Forms.Label labelReadMhz;
@@ -621,7 +643,6 @@
         private System.Windows.Forms.ComboBox comboBoxWriteRFBaudRate;
         private System.Windows.Forms.Label labelWriteRFBaudRate;
         private System.Windows.Forms.Label labelWriteSec;
-        private System.Windows.Forms.TextBox textBoxWriteTimeInterval;
         private System.Windows.Forms.Label labelWriteTimeInterval;
         private System.Windows.Forms.GroupBox groupBoxPCSetting;
         private System.Windows.Forms.ComboBox comboBoxSerialPort;
@@ -631,6 +652,9 @@
         private System.Windows.Forms.Label labelWriteToDeviceTimeOut;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBoxReadTimeInterval;
+        private System.Windows.Forms.ComboBox comboBoxWriteTimeInterval;
     }
 }
 
