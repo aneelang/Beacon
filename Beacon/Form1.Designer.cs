@@ -149,6 +149,7 @@
             750,
             875,
             1000});
+            this.comboBoxReadTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadTimeInterval.Location = new System.Drawing.Point(110, 88);
             this.comboBoxReadTimeInterval.Name = "comboBoxReadTimeInterval";
             this.comboBoxReadTimeInterval.Size = new System.Drawing.Size(64, 26);
@@ -217,6 +218,7 @@
             this.comboBoxReadPowerLevel.Name = "comboBoxReadPowerLevel";
             this.comboBoxReadPowerLevel.Size = new System.Drawing.Size(64, 26);
             this.comboBoxReadPowerLevel.TabIndex = 10;
+            this.comboBoxReadPowerLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // comboBoxReadChannel
             // 
@@ -226,6 +228,7 @@
             867.3D,
             867.5D,
             867.7D});
+            this.comboBoxReadChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadChannel.Location = new System.Drawing.Point(110, 184);
             this.comboBoxReadChannel.Name = "comboBoxReadChannel";
             this.comboBoxReadChannel.Size = new System.Drawing.Size(64, 26);
@@ -252,6 +255,7 @@
             // comboBoxReadRFBaudRead
             // 
             this.comboBoxReadRFBaudRead.FormattingEnabled = true;
+            this.comboBoxReadRFBaudRead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadRFBaudRead.Items.AddRange(new object[] {
             9.6D,
             38.4D,
@@ -342,6 +346,7 @@
             750,
             875,
             1000});
+            this.comboBoxWriteTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteTimeInterval.Location = new System.Drawing.Point(113, 93);
             this.comboBoxWriteTimeInterval.Name = "comboBoxWriteTimeInterval";
             this.comboBoxWriteTimeInterval.Size = new System.Drawing.Size(63, 26);
@@ -378,6 +383,7 @@
             0,
             5,
             7});
+            this.comboBoxWritePowerLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWritePowerLevel.Location = new System.Drawing.Point(113, 269);
             this.comboBoxWritePowerLevel.Name = "comboBoxWritePowerLevel";
             this.comboBoxWritePowerLevel.Size = new System.Drawing.Size(63, 26);
@@ -419,6 +425,7 @@
             867.3D,
             867.5D,
             867.7D});
+            this.comboBoxWriteChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteChannel.Location = new System.Drawing.Point(113, 189);
             this.comboBoxWriteChannel.Name = "comboBoxWriteChannel";
             this.comboBoxWriteChannel.Size = new System.Drawing.Size(63, 26);
@@ -455,6 +462,7 @@
             this.comboBoxWriteRFBaudRate.Size = new System.Drawing.Size(64, 26);
             this.comboBoxWriteRFBaudRate.TabIndex = 9;
             this.comboBoxWriteRFBaudRate.Text = "100";
+            this.comboBoxWriteRFBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // labelWriteRFBaudRate
             // 
@@ -519,6 +527,7 @@
             this.comboBoxSerialPort.Name = "comboBoxSerialPort";
             this.comboBoxSerialPort.Size = new System.Drawing.Size(106, 26);
             this.comboBoxSerialPort.TabIndex = 16;
+            this.comboBoxSerialPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // labelSerialPort
             // 
@@ -568,7 +577,7 @@
             this.textBox1.Size = new System.Drawing.Size(275, 23);
             this.textBox1.TabIndex = 24;
             this.textBox1.WordWrap = false;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // timer1
             // 
