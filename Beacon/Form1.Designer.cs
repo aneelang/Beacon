@@ -139,6 +139,7 @@
             // 
             // comboBoxReadTimeInterval
             // 
+            this.comboBoxReadTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadTimeInterval.FormattingEnabled = true;
             this.comboBoxReadTimeInterval.Items.AddRange(new object[] {
             125,
@@ -149,7 +150,6 @@
             750,
             875,
             1000});
-            this.comboBoxReadTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadTimeInterval.Location = new System.Drawing.Point(110, 88);
             this.comboBoxReadTimeInterval.Name = "comboBoxReadTimeInterval";
             this.comboBoxReadTimeInterval.Size = new System.Drawing.Size(64, 26);
@@ -202,6 +202,7 @@
             // 
             // comboBoxReadPowerLevel
             // 
+            this.comboBoxReadPowerLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadPowerLevel.FormattingEnabled = true;
             this.comboBoxReadPowerLevel.Items.AddRange(new object[] {
             -30,
@@ -218,17 +219,16 @@
             this.comboBoxReadPowerLevel.Name = "comboBoxReadPowerLevel";
             this.comboBoxReadPowerLevel.Size = new System.Drawing.Size(64, 26);
             this.comboBoxReadPowerLevel.TabIndex = 10;
-            this.comboBoxReadPowerLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // comboBoxReadChannel
             // 
+            this.comboBoxReadChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadChannel.FormattingEnabled = true;
             this.comboBoxReadChannel.Items.AddRange(new object[] {
             867.1D,
             867.3D,
             867.5D,
             867.7D});
-            this.comboBoxReadChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReadChannel.Location = new System.Drawing.Point(110, 184);
             this.comboBoxReadChannel.Name = "comboBoxReadChannel";
             this.comboBoxReadChannel.Size = new System.Drawing.Size(64, 26);
@@ -254,8 +254,8 @@
             // 
             // comboBoxReadRFBaudRead
             // 
-            this.comboBoxReadRFBaudRead.FormattingEnabled = true;
             this.comboBoxReadRFBaudRead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxReadRFBaudRead.FormattingEnabled = true;
             this.comboBoxReadRFBaudRead.Items.AddRange(new object[] {
             9.6D,
             38.4D,
@@ -336,6 +336,7 @@
             // 
             // comboBoxWriteTimeInterval
             // 
+            this.comboBoxWriteTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteTimeInterval.FormattingEnabled = true;
             this.comboBoxWriteTimeInterval.Items.AddRange(new object[] {
             125,
@@ -346,12 +347,10 @@
             750,
             875,
             1000});
-            this.comboBoxWriteTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteTimeInterval.Location = new System.Drawing.Point(113, 93);
             this.comboBoxWriteTimeInterval.Name = "comboBoxWriteTimeInterval";
             this.comboBoxWriteTimeInterval.Size = new System.Drawing.Size(63, 26);
             this.comboBoxWriteTimeInterval.TabIndex = 27;
-            this.comboBoxWriteTimeInterval.Text = "125";
             // 
             // labelWriteDbm
             // 
@@ -373,6 +372,7 @@
             // 
             // comboBoxWritePowerLevel
             // 
+            this.comboBoxWritePowerLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWritePowerLevel.FormattingEnabled = true;
             this.comboBoxWritePowerLevel.Items.AddRange(new object[] {
             -30,
@@ -383,12 +383,10 @@
             0,
             5,
             7});
-            this.comboBoxWritePowerLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWritePowerLevel.Location = new System.Drawing.Point(113, 269);
             this.comboBoxWritePowerLevel.Name = "comboBoxWritePowerLevel";
             this.comboBoxWritePowerLevel.Size = new System.Drawing.Size(63, 26);
             this.comboBoxWritePowerLevel.TabIndex = 21;
-            this.comboBoxWritePowerLevel.Text = "12";
             // 
             // checkBoxWriteGoToSleepMode
             // 
@@ -419,18 +417,17 @@
             // 
             // comboBoxWriteChannel
             // 
+            this.comboBoxWriteChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteChannel.FormattingEnabled = true;
             this.comboBoxWriteChannel.Items.AddRange(new object[] {
             867.1D,
             867.3D,
             867.5D,
             867.7D});
-            this.comboBoxWriteChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteChannel.Location = new System.Drawing.Point(113, 189);
             this.comboBoxWriteChannel.Name = "comboBoxWriteChannel";
             this.comboBoxWriteChannel.Size = new System.Drawing.Size(63, 26);
             this.comboBoxWriteChannel.TabIndex = 13;
-            this.comboBoxWriteChannel.Text = "867.1";
             // 
             // labelWriteChannel
             // 
@@ -452,6 +449,7 @@
             // 
             // comboBoxWriteRFBaudRate
             // 
+            this.comboBoxWriteRFBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWriteRFBaudRate.FormattingEnabled = true;
             this.comboBoxWriteRFBaudRate.Items.AddRange(new object[] {
             9.6D,
@@ -461,8 +459,6 @@
             this.comboBoxWriteRFBaudRate.Name = "comboBoxWriteRFBaudRate";
             this.comboBoxWriteRFBaudRate.Size = new System.Drawing.Size(64, 26);
             this.comboBoxWriteRFBaudRate.TabIndex = 9;
-            this.comboBoxWriteRFBaudRate.Text = "100";
-            this.comboBoxWriteRFBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // labelWriteRFBaudRate
             // 
@@ -522,12 +518,12 @@
             // 
             // comboBoxSerialPort
             // 
+            this.comboBoxSerialPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSerialPort.FormattingEnabled = true;
             this.comboBoxSerialPort.Location = new System.Drawing.Point(110, 21);
             this.comboBoxSerialPort.Name = "comboBoxSerialPort";
             this.comboBoxSerialPort.Size = new System.Drawing.Size(106, 26);
             this.comboBoxSerialPort.TabIndex = 16;
-            this.comboBoxSerialPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // labelSerialPort
             // 
@@ -577,7 +573,6 @@
             this.textBox1.Size = new System.Drawing.Size(275, 23);
             this.textBox1.TabIndex = 24;
             this.textBox1.WordWrap = false;
-            // this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // timer1
             // 

@@ -40,6 +40,5 @@ namespace Beacon
             textBox1.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
         }
 
-       
     }
 }
